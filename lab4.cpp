@@ -1,6 +1,5 @@
 #include <iostream>
 #include <stdio.h>
-#include "stdafx.h"
 #include <vector>
 
 using namespace std;
