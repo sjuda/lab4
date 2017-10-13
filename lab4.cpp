@@ -23,7 +23,6 @@ using namespace std;
             vec.push_back(j);
         }
         while(j < 1000);
-
         vector<double> vecto;
         int b = 0;
         do
@@ -38,9 +37,9 @@ using namespace std;
             vecto.push_back(vect[c]);
             c++;
         }
-        while(b < vect.size());
+        while(c < vect.size());
         int z = 0;
-        for (int w =0;z+1 < vecto.size();w++ )
+        for (int w = 0;z+1 < vecto.size();w++ )
         {
             if (vecto[z] < vecto[z+1])
             {
