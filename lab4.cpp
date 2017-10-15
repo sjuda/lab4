@@ -1,6 +1,10 @@
-#include <iostream>
-#include <stdio.h>
+#include <ostream>
 #include <vector>
+#include <stdio.h>
+#include <random>
+#include <cstdlib>
+#include <string>
+#include <iostream>
 
 using namespace std;
 int main()
@@ -13,8 +17,7 @@ int main()
     {
         cin >> k;
         vec.push_back(k);
-    }
-
+	}
     while (k < 1000);
     vector<double> vect;
     cout << "Enter double massive elements (when you done, enter value biggest than 1000): " << endl;
@@ -54,7 +57,7 @@ int main()
     unsigned int g = 0;
     do
     {
-        cout<< g << " element is: " << vecto[g];
+        cout << g << " element is: " << vecto[g];
         g++;
     }
     while (g < vecto.size());
