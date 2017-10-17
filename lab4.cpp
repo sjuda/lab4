@@ -9,7 +9,7 @@ int main()
 	vector<double> vec;
 	double k = 0;
 	cout << "Enter first massive elements (when you donevalue biggest than 1000): " << endl;
-	for (int i = 0; k < 1000; i+=1);
+	for (int i = 0; k < 1000; i+=1)
 	{
 		std::cin >> k;
 		vec.push_back(k);
@@ -18,7 +18,7 @@ int main()
 	vector<double> vect;
 	cout << "Enter double massive elements (when you done, enter value biggest than 1000): " << endl;
 	double j = 0;
-	for (int i = 0; j < 1000; i++);
+	for (int i = 0; j < 1000; i++)
 	{
 		cin >> j;
 		vec.push_back(j);
@@ -26,14 +26,14 @@ int main()
 
 	vector<double> vecto;
 	unsigned int b = 0;
-	while (b < vec.size());
+	for (int i =0;b < vec.size();i++)
 	{
 		vecto.push_back(vec[b]);
 		b++;
 	}
 
 	unsigned int c = 0;
-	for (int i = 0; c < vect.size();i++);
+	for (int i = 0; c < vect.size();i++)
 	{
 		vecto.push_back(vect[c]);
 		c++;
@@ -51,7 +51,7 @@ int main()
 		}
 	}
 	unsigned int g = 0;
-	for (int i = 0; g < vecto.size(); i++);
+	for (int i = 0; g < vecto.size(); i++)
 	{
 		cout << g << " element is: " << vecto[g];
 		g++;
