@@ -33,10 +33,9 @@ int main()
 	}
 
 	unsigned int c = 0;
-	for (int i = 0; c < vect.size();i++)
+	for (c = 0; c < vect.size();c++)
 	{
 		vecto.push_back(vect[c]);
-		c++;
 	}
 
 	unsigned int z = 0;
