@@ -1,60 +1,58 @@
+#include "stdafx.h"
 #include <vector>
-#include <stdio.h>
 #include <iostream>
 
 using namespace std;
 int main()
 
 {
-	vector<double> vec;
-	double k = 0;
-	cout << "Enter first massive elements (when you donevalue biggest than 1000): " << endl;
-	for (int i = 0; k < 1000; i+=1)
-	{
-		std::cin >> k;
-		vec.push_back(k);
-	}
-
-	vector<double> vect;
-	cout << "Enter double massive elements (when you done, enter value biggest than 1000): " << endl;
-	double j = 0;
-	for (int i = 0; j < 1000; i++)
-	{
-		cin >> j;
-		vec.push_back(j);
-	}
-
-	vector<double> vecto;
-	unsigned int b = 0;
-	for (int i =0;b < vec.size();i++)
-	{
-		vecto.push_back(vec[b]);
-		b++;
-	}
-
-	unsigned int c = 0;
-	for (c = 0; c < vect.size();c++)
-	{
-		vecto.push_back(vect[c]);
-	}
-
-	unsigned int z = 0;
-	for (int w = 0; z + 1 < vecto.size(); w++)
-	{
-		if (vecto[z] < vecto[z + 1])
-		{
-			double vr = vecto[z];
-			vecto[z] = vecto[z + 1];
-			vecto.push_back(vr);
-			z++;
-		}
-	}
-	unsigned int g = 0;
-	for (int i = 0; g < vecto.size(); i++)
-	{
-		cout << g << " element is: " << vecto[g];
-		g++;
-	}
-
-	return 0;
+    vector<float> vec;
+    float k = 0;
+    cout << "Enter first massive elements (when you done enter 1000): " << endl;
+    while(k != 1000)
+    {
+        cin >> k;
+        if(k != 1000) vec.push_back(k);
+        else break;
+    }
+    //for (float i = 0; i < vec.size(); i++) cout << vec[i];
+    vector<float> vect;
+    cout << "Enter float massive elements (when you done, enter 1000): " << endl;
+    float j = 0;
+    while (j != 1000)
+    {
+        cin >> j;
+        if (j != 1000) vect.push_back(j);
+    }
+    vector<float> vecto;
+    for(float i = 0;i < vec.size();i++)
+    {
+        vecto.push_back(vec[i]);
+    }
+    for (float i = 0; i < vect.size(); i++)
+    {
+        vecto.push_back(vect[i]);
+    }
+    float min = vecto[0];
+    float max = vecto[0];
+    for (float i = 0; i < vecto.size() - 1; i++)
+    {
+        if (min > vecto[i + 1]) min = vecto[i + 1];
+        if (max < vecto[i + 1]) max = vecto[i + 1];
+    }
+    float t;
+    for (float i = 0; i < vecto.size(); i++) 
+    {
+        for (float h = i + 1; h < vecto.size(); h++)
+        {
+            if (vecto[i] > vecto[h])
+            {
+                t = vecto[i];
+                vecto[i] = vecto[h];
+                vecto[h] = t;
+            }
+        }
+    }
+    //for (float i = 0; i < vecto.size(); i++) cout << vecto[i] << endl;
+    return 0;
 }
